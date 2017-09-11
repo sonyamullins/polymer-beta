@@ -6,7 +6,8 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
---><link rel="import" href="boot.html">
+-->
+<link rel="import" href="boot.html">
 
 <script>
 (function() {
@@ -172,7 +173,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
        *
        * @memberof Polymer.Async.microTask
        * @param {Function} callback Callback to run
-       * @return {*} Handle used for canceling task
+       * @return {number} Handle used for canceling task
        */
       run(callback) {
         microtaskNode.textContent = microtaskNodeContent++;

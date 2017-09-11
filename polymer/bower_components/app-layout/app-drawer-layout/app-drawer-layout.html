@@ -6,7 +6,9 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
---><link rel="import" href="../../polymer/polymer.html">
+-->
+
+<link rel="import" href="../../polymer/polymer.html">
 <link rel="import" href="../../iron-media-query/iron-media-query.html">
 <link rel="import" href="../app-layout-behavior/app-layout-behavior.html">
 
@@ -126,8 +128,7 @@ a shadow root):
 
 @group App Elements
 @element app-drawer-layout
-@demo app-drawer-layout/demo/simple-drawer.html Simple Demo
-@demo app-drawer-layout/demo/two-drawers.html Two drawers
+@demo app-drawer-layout/demo/index.html
 -->
 
 <dom-module id="app-drawer-layout">
@@ -174,7 +175,9 @@ a shadow root):
       <slot></slot>
     </div>
 
-    <iron-media-query query="[[_computeMediaQuery(forceNarrow, responsiveWidth)]]" on-query-matches-changed="_onQueryMatchesChanged"></iron-media-query>
+    <iron-media-query
+        query="[[_computeMediaQuery(forceNarrow, responsiveWidth)]]"
+        on-query-matches-changed="_onQueryMatchesChanged"></iron-media-query>
   </template>
 
   <script>
@@ -248,8 +251,7 @@ a shadow root):
         // Disable drawer transitions until after app-drawer-layout sets the initial opened state.
         var drawer = this.drawer;
         if (drawer) {
-          this._savedDrawerTransitionDuration = drawer.transitionDuration;
-          drawer.transitionDuration = 0;
+          drawer.setAttribute('no-transition', '');
         }
       },
 
@@ -265,7 +267,7 @@ a shadow root):
 
       _updateLayoutStates: function() {
         var drawer = this.drawer;
-        if (!drawer) {
+        if (!this.isAttached || !drawer) {
           return;
         }
 
@@ -277,11 +279,10 @@ a shadow root):
           } else {
             drawer.opened = drawer.persistent = true;
           }
-          if (this._savedDrawerTransitionDuration) {
+          if (drawer.hasAttribute('no-transition')) {
             // Enable drawer transitions after app-drawer-layout sets the initial opened state.
             Polymer.RenderStatus.afterNextRender(this, function() {
-              drawer.transitionDuration = this._savedDrawerTransitionDuration;
-              this._savedDrawerTransitionDuration = 0;
+              drawer.removeAttribute('no-transition');
             });
           }
           this._drawerNeedsReset = false;

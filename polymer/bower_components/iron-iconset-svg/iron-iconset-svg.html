@@ -6,7 +6,9 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
---><link rel="import" href="../polymer/polymer.html">
+-->
+
+<link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-meta/iron-meta.html">
 
 <script>
@@ -230,6 +232,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         svg.setAttribute('viewBox', viewBox);
         svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+        svg.setAttribute('focusable', 'false');
         // TODO(dfreedm): `pointer-events: none` works around https://crbug.com/370136
         // TODO(sjmiles): inline style may not be ideal, but avoids requiring a shadow-root
         svg.style.cssText = cssText;

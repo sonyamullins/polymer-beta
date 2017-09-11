@@ -6,7 +6,9 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
---><link rel="import" href="class.html">
+-->
+
+<link rel="import" href="class.html">
 
 <script>
 
@@ -24,9 +26,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
      *
      * @override
      * @function Polymer
-     * @param {Object} info Object containing Polymer metadata and functions
+     * @param {!PolymerInit} info Object containing Polymer metadata and functions
      *   to become class methods.
-     * @return {Polymer.LegacyElement} Generated class
+     * @return {!HTMLElement} Generated class
+     * @suppress {duplicate, invalidCasts, checkTypes}
      */
     window.Polymer._polymerFn = function(info) {
       // if input is a `class` (aka a function with a prototype), use the prototype
@@ -37,7 +40,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       } else {
         klass = Polymer.Class(info);
       }
-      customElements.define(klass.is, klass);
+      customElements.define(klass.is, /** @type {!HTMLElement} */(klass));
       return klass;
     };
 

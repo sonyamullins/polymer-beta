@@ -6,7 +6,9 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
---><link rel="import" href="../../polymer/polymer.html">
+-->
+
+<link rel="import" href="../../polymer/polymer.html">
 <link rel="import" href="../../iron-flex-layout/iron-flex-layout.html">
 
 <!--
@@ -163,13 +165,18 @@ a shadow root):
       #scrim.visible {
         opacity: 1;
       }
+
+      :host([no-transition]) #contentContainer {
+        transition-property: none;
+      }
     </style>
 
     <div id="scrim" on-click="close"></div>
 
     <!-- HACK(keanulee): Bind attributes here (in addition to :host) for styling to workaround Safari
     bug. https://bugs.webkit.org/show_bug.cgi?id=170762 -->
-    <div id="contentContainer" opened$="[[opened]]" persistent$="[[persistent]]" position$="[[position]]" swipe-open$="[[swipeOpen]]">
+    <div id="contentContainer" opened$="[[opened]]" persistent$="[[persistent]]"
+        position$="[[position]]" swipe-open$="[[swipeOpen]]">
       <slot></slot>
     </div>
   </template>
@@ -315,7 +322,7 @@ a shadow root):
        * @return {number} The width of the drawer in pixels.
        */
       getWidth: function() {
-        return this.$.contentContainer.offsetWidth;
+        return this._savedWidth || this.$.contentContainer.offsetWidth;
       },
 
       _isRTL: function() {
@@ -367,11 +374,8 @@ a shadow root):
       _trackStart: function(event) {
         this._drawerState = this._DRAWER_STATE.TRACKING;
 
-        // Disable transitions since style attributes will reflect user track events.
-        this._styleTransitionDuration(0);
-        this.style.visibility = 'visible';
-
         var rect = this.$.contentContainer.getBoundingClientRect();
+        this._savedWidth = rect.width;
         if (this.position === 'left') {
           this._translateOffset = rect.left;
         } else {
@@ -379,6 +383,10 @@ a shadow root):
         }
 
         this._trackDetails = [];
+
+        // Disable transitions since style attributes will reflect user track events.
+        this._styleTransitionDuration(0);
+        this.style.visibility = 'visible';
       },
 
       _trackMove: function(event) {
@@ -541,6 +549,8 @@ a shadow root):
           this._styleTransitionTimingFunction('');
           this.style.visibility = '';
         }
+
+        this._savedWidth = null;
 
         if (this.opened) {
           this._drawerState = this.persistent ?

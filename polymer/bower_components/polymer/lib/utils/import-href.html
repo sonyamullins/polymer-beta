@@ -6,7 +6,9 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
---><link rel="import" href="boot.html">
+-->
+
+<link rel="import" href="boot.html">
 
 <script>
 
@@ -43,10 +45,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
    * @return {HTMLLinkElement} The link element for the URL to be loaded.
    */
   Polymer.importHref = function(href, onload, onerror, optAsync) {
-    let link =
-      document.head.querySelector('link[href="' + href + '"][import-href]');
+    let link = /** @type {HTMLLinkElement} */
+      (document.head.querySelector('link[href="' + href + '"][import-href]'));
     if (!link) {
-      link = document.createElement('link');
+      link = /** @type {HTMLLinkElement} */ (document.createElement('link'));
       link.rel = 'import';
       link.href = href;
       link.setAttribute('import-href', '');

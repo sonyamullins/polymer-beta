@@ -6,7 +6,8 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
---><link rel="import" href="../utils/boot.html">
+-->
+<link rel="import" href="../utils/boot.html">
 <link rel="import" href="../utils/resolve-url.html">
 <script>
 (function() {
@@ -43,10 +44,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
    *
    *     let img = document.createElement('dom-module').import('foo', 'img');
    *
+   * @customElement
    * @extends HTMLElement
    * @memberof Polymer
    * @summary Custom element that provides a registry of relocatable DOM content
    *   by `id` that is agnostic to bundling.
+   * @unrestricted
    */
   class DomModule extends HTMLElement {
 
