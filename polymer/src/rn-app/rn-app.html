@@ -253,7 +253,7 @@
 
       <app-drawer slot="drawer">
         <div style="height: 100%;overflow-x:auto;">
-          <img class="genesys-logo" src="genesys-logo.svg"/>
+          <img class="genesys-logo" src="/src/rn-app/genesys-logo.svg"/>
           <iron-a11y-keys id="searchkey" target="[[target]]" keys="enter" on-keys-pressed="onEnter"></iron-a11y-keys>
           <paper-input id="searchinput" label="Search" value="{{userInput::input}}">
             <iron-icon icon="search" slot="prefix"></iron-icon>
@@ -289,7 +289,7 @@
           <app-toolbar style="height: 100px;padding:0;margin:0;">
             <paper-icon-button icon="menu" title="menu" drawer-toggle></paper-icon-button>
             <div main-title>
-              <img src="pureconnect.svg" alt="" class="inappheader"/>
+              <img src="/src/rn-app/pureconnect.svg" alt="" class="inappheader"/>
               <p>PureConnect Release Notes prototype</p>
             </div>
           </app-toolbar>
@@ -386,7 +386,11 @@
         uristr = urlbase + uristr;
         this.shadowRoot.querySelector("iron-ajax#es").url = uristr;
         this.shadowRoot.querySelector("iron-collapse#ironintro").opened = false;
-        this.shadowRoot.querySelector("iron-collapse.ironrel").opened = true;
+        var ironrelsall = this.shadowRoot.querySelectorAll("iron-collapse.ironrel");
+        for(var r=0;r<ironrelsall.length;r++){
+          ironrelsall[r].opened = true;
+        }
+        // this.shadowRoot.querySelectorAll("iron-collapse.ironrel").opened = true;
         this.shadowRoot.querySelector("iron-ajax#prods").url = "";
         var chkall = this.shadowRoot.querySelectorAll("paper-checkbox");
         for (var i=0;i < chkall.length;i++){
