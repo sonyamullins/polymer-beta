@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PureConnect Product Information prototype</title>
+    <style type="text/css">
+      html, body {
+        width: 98%;
+        height: 98%;
+        /* margin: 0; */
+      }
+
+      a:hover {
+        color:#ff4f1f;
+      }
+
+      abbr {
+        text-decoration: none;
+      }
+
+      body {
+        background-color: transparent;
+        font-family: "Roboto", sans-serif;
+      }
+
+      div.card {
+        border: 1px solid #5e3d5e;
+        border-radius: 6px;
+        box-shadow: 3px 3px 6px rgba(128,128,128,0.4);
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 6px;
+        padding: 6px;
+        text-align: left;
+        width: 85%;
+      }
+
+      div.category {
+        background-color: #5e3d5e;
+        color: white;
+        margin: 0px 0px 6px 0px;
+        padding-bottom: 6px;
+        padding-top: 6px;
+        vertical-align: top;
+      }
+
+      div.solution {
+        background-color: #ff4f1f;
+        color: #ffffff;
+        font-size: 20.0pt;
+        padding: 6px;
+        text-align: center;
+        transform:rotate(-90deg);
+        vertical-align: top;
+        white-space:nowrap;
+      }
+
+      p.card_desc {
+        color: rgba(192,192,192,1.0);
+        font-size: 8.0pt;
+        margin: 3px;
+        padding: 0;
+      }
+
+      p.card_link {
+        font-size: 8.0pt;
+        margin: 3px;
+      }
+
+      p.card_title {
+        color: #5e3d5e;
+        font-size: 10.0pt;
+        font-weight: bold;
+        margin: 3px;
+        padding: 0;
+      }
+
+      table {
+        /* border: thin solid black; */
+        border-bottom: 6px solid #5e3d5e;
+        border-collapse: collapse;
+        height: 90%;
+        table-layout: fixed;
+        width: 100%;
+      }
+
+      td.category_column {
+        border-left: 1px solid rgb(192,192,192);
+        border-right: 1px solid rgb(192,192,192);
+        padding: 0;
+        text-align: center;
+        vertical-align: top;
+        width: 20%;
+      }
+
+      td.solution_column {
+        background-color: #ff4f1f;
+        color: white;
+        padding: 235px 0 0 0;
+        vertical-align: top;
+        white-space: nowrap;
+        width:50px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td class="solution_column">
+          <div class="solution">
+            Customer&nbsp;Engagement
+          </div>
+        </td>
+        <td class="category_column">
+          <div class="category">
+            <abbr title="Non-voice communications through various electronic media">
+              Digital
+            </abbr>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Chat
+            </p>
+            <p class="card_desc">
+              Real-time, text-based communication
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_basl_connect/desktop/working_with_chats.htm">
+              Working with Chat Sessions
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Callbacks
+            </p>
+            <p class="card_desc">
+              Callers request return telephone calls
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_basl_connect/desktop/working_with_callback_requests.htm">
+              Working with Callback Requests
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Co-browse
+            </p>
+            <p class="card_desc">
+              (PureCloud integration) Agents can view web browser activity by a customer
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/desktop/cic_co-browse.htm">
+                CIC Co-browse
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Email
+            </p>
+            <p class="card_desc">
+              Electronic mail communications
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_basl_connect/desktop/working_with_email.htm">
+                Working with Email Messages
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Fax
+            </p>
+            <p class="card_desc">
+              Facsimile document transmissions
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_fax/desktop/quick_summary_of_fax_and_monitor.htm">
+                Overview of Interaction Fax
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              SMS
+            </p>
+            <p class="card_desc">
+              Short Message Service
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_tr/desktop/sms.htm">
+                <cite>Short Message Service Technical Reference</cite>
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Social media integration
+            </p>
+            <p class="card_desc">
+              Organizational communications with customers through social media
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Social media integration
+              </a>
+            </p>
+          </div>
+
+        </td>
+        <td class="category_column">
+          <div class="category">
+              <abbr title="Voice communications that originate from a customer into the contact center">
+                Inbound
+              </abbr>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Audiocodes (Gateways, SBCs, IP Phones)
+            </p>
+            <p class="card_desc">
+              Devices made by AudioCodes that facilitate incoming voice
+              communications
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_ia/desktop/managed_ip_phones/audiocodes_settings.htm">
+                AudioCodes settings
+              </a>
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_tr/desktop/managed_ip_phones.htm">
+                <cite>IC Managed IP Phones Administrator's Guide</cite>
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Conference
+            </p>
+            <p class="card_desc">
+              Voice communications for more than two parties
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_confa/desktop/interaction_conference_administration_guide.htm">
+                <cite>Interaction Conference Administrator's Guide</cite>
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Edge Gateway
+            </p>
+            <p class="card_desc">
+              Device that facilitates voice communications between PureConnect and external connections, such as the Public Switch Telephone Network (PSTN) and SIP communications carriers
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_ps/desktop/interaction_edge_installation_and_configuration_guide.htm">
+                <cite>Interaction Edge Installation and Configuration Guide</cite>
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Media Server
+            </p>
+            <p class="card_desc">
+              The PureConnect subsystem that handles all aspects of audio in
+              voice communications, including prompts, recordings, transcoding,
+              transcryption, and more
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_tr/desktop/interaction_media_server.htm">
+                <cite>Interaction Media Server Technical Reference</cite>
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction SIP Proxy
+            </p>
+            <p class="card_desc">
+              A PureConnect subsystem involved with routing voice communications
+              throughout physical networks
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_ps/desktop/interaction_sip_proxy_technical_reference.htm">
+                <cite>Interaction SIP Proxy Technical Reference</cite>
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction SIP Station
+            </p>
+            <p class="card_desc">
+              Device designed for agents to simplify voice communications
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_ia/desktop/managed_ip_phones/interaction_sip_stations_settings.htm">
+                Interaction SIP stations settings
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Polycom IP Phones
+            </p>
+            <p class="card_desc">
+              IP-based telephony devices manufactured by Polycom
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_ia/desktop/managed_ip_phones/polycom_phone_settings.htm">
+                Polycom phone settings
+              </a>
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_tr/desktop/managed_ip_phones.htm">
+                <cite>IC Managed IP Phones Administrator's Guide</cite>
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              SIP Bridge
+            </p>
+            <p class="card_desc">
+              A PureConnect software product that enables remote agents to use an IP telephone device to place and receive telephone calls as a PureConnect agent
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_tr/desktop/interaction_sip_bridge.htm">
+                <cite>Interaction SIP Bridge Installation and Configuration Guide</cite>
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              SIP
+            </p>
+            <p class="card_desc">
+              Session Initiation Protocol - A standard for establishing and conducting communications over TCP/IP networks
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for SIP
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Skype for Business
+            </p>
+            <p class="card_desc">
+              PureConnect integration with this Microsoft&reg; software-based communication product
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Skype for Business
+              </a>
+            </p>
+          </div>
+
+        </td>
+
+        <td class="category_column">
+          <div class="category">
+              Outbound
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Dialer
+            </p>
+            <p class="card_desc">
+              Predictive dialing solution for PureConnect including features such as campaigns
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_dlr/desktop/interaction_dialer_2015.htm">
+                Interaction Dialer 2017
+              </a>
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_dlr/mergedProjects/dialer_manager_help2/desktop/dialer_manager_help.htm">
+                Interaction Dialer Help
+              </a>
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_dlr/desktop/dlr_pdfs/dialer_icg.pdf">
+                <cite>Interaction Dialer Installation and Configuration Guide</cite>
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Scripter
+            </p>
+            <p class="card_desc">
+              Software for agents to process campaign calls
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_dlr/mergedProjects/scripter_client_help2/desktop/scripter_client_help.htm">
+                Interaction Scripter .NET Client Help
+              </a>
+            </p>
+            <p class="card_link">
+              <a href="https://help.genesys.com/cic/mergedProjects/wh_dlr/mergedProjects/scripter_dg/desktop/interaction_scripter_developers_guide.htm">
+                <cite>Interaction Scripter Developer's Guide</cite>
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Latitude
+            </p>
+            <p class="card_desc">
+              PureConnect solution for Accounts Receivable Management
+            </p>
+            <p class="card_link">
+              <a href="https://my.inin.com/products/Latitude10/Pages/Documentation.aspx">
+                Latitude 10.0 Documentation Library
+              </a>
+            </p>
+          </div>
+
+        </td>
+        <td class="category_column">
+          <div class="category">
+              Self-Service
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Attendant (IVR)
+            </p>
+            <p class="card_desc">
+              Description for Interaction Attendant (IVR)
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Attendant (IVR)
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Mobile Office
+            </p>
+            <p class="card_desc">
+              Description for Interaction Mobile Office
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Mobile Office
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Speech Recognition
+            </p>
+            <p class="card_desc">
+              Decription for Interaction Speech Recognition
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Speech Recognition
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Nuance ASR
+            </p>
+            <p class="card_desc">
+              Description for Nuance ASR
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Nuance ASR
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              3rd party MRCP
+            </p>
+            <p class="card_desc">
+              Description for 3rd party MRCP
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for 3rd party MRCP
+              </a>
+            </p>
+          </div>
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td class="solution_column">
+          <div class="solution">
+            Employee&nbsp;Engagement
+          </div>
+        </td>
+
+        <td class="category_column">
+          <div class="category">
+            <abbr title="">
+              Collaboration
+            </abbr>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Directory
+            </p>
+            <p class="card_desc">
+              Description for Directory
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Directory
+              </a>
+            </p>
+          </div>
+        </td>
+
+        <td class="category_column">
+          <div class="category">
+            <abbr title="">
+              Omnichannel Desktop
+            </abbr>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              CIC for Salesforce
+            </p>
+            <p class="card_desc">
+              Description for CIC for Salesforce
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for CIC for Salesforce
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              IC Business Manager
+            </p>
+            <p class="card_desc">
+              Description for IC Business Manager
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for IC Business Manager
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Connect
+            </p>
+            <p class="card_desc">
+              Description for Interaction Connect
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Connect
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Collector
+            </p>
+            <p class="card_desc">
+              Description for Interaction Collector
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Collector
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Desktop
+            </p>
+            <p class="card_desc">
+              Description for Interaction Desktop
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Desktop
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Scripter
+            </p>
+            <p class="card_desc">
+              Description for Interaction Scripter
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Scripter
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Supervisor, Interaction Supervisor iPad Edition
+            </p>
+            <p class="card_desc">
+              Description for Interaction Supervisor
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for CIC for Interaction Supervisor
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Web Portal
+            </p>
+            <p class="card_desc">
+              Description for Interaction Web Portal
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Web Portal
+              </a>
+            </p>
+          </div>
+
+        </td>
+
+        <td class="category_column">
+          <div class="category">
+            <abbr title="">
+              Workforce&nbsp;Optimization
+            </abbr>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Analyzer
+            </p>
+            <p class="card_desc">
+              Description for Interaction Analyzer
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Analyzer
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Feedback
+            </p>
+            <p class="card_desc">
+              Description of Interaction Feedback
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Feedback
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Optimizer
+            </p>
+            <p class="card_desc">
+              Description for Interaction Optimizer
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Optimizer
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Quality Manager
+            </p>
+            <p class="card_desc">
+              Description for Interaction Quality Manager
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Quality Manager
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Recorder
+            </p>
+            <p class="card_desc">
+              Description for Interaction Recorder
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Recorder
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Screen Recorder
+            </p>
+            <p class="card_desc">
+              Description for Interaction Screen Recorder
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Screen Recorder
+              </a>
+            </p>
+          </div>
+        </td>
+
+        <td class="category_column"></td>
+
+      </tr>
+
+      <tr>
+
+        <td class="solution_column">
+          <div class="solution">
+            Business&nbsp;Optimization
+          </div>
+        </td>
+
+        <td class="category_column">
+          <div class="category">
+            <abbr title="">
+              Analytics
+            </abbr>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Dashboards (coming)
+            </p>
+            <p class="card_desc">
+              Description for Dashboards
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Dashboards
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Decisions (old doc?)
+            </p>
+            <p class="card_desc">
+              Description for Decisions
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Decisions
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Marquee
+            </p>
+            <p class="card_desc">
+              Description for Interaction Marquee
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Marquee
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Reporter (historical)
+            </p>
+            <p class="card_desc">
+              Description for Interaction Reporter (historical)
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Reporter (historical)
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Report Assistant (real-time)?
+            </p>
+            <p class="card_desc">
+              Description for Interaction Report Assistant
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Report Assistant
+              </a>
+            </p>
+          </div>
+        </td>
+
+        <td class="category_column">
+          <div class="category">
+            <abbr title="">
+              Integration
+            </abbr>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Bridge Server
+            </p>
+            <p class="card_desc">
+              Description for Bridge Server
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Bridge Server
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Call Scripter
+            </p>
+            <p class="card_desc">
+              Description for Call Scripter
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Call Scripter
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Case Management Connectors (ZenDesk)
+            </p>
+            <p class="card_desc">
+              Description for Case Management Connectors
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Case Management Connectors
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              CRM Adapters
+            </p>
+            <p class="card_desc">
+              Oracle Service Cloud (RightNow), SAP ICI, Oracle Siebel, Salesforce
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for CRM Adapters
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Generic Objects
+            </p>
+            <p class="card_desc">
+              Description for Generic Objects
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Generic Objects
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              IC Web Services
+            </p>
+            <p class="card_desc">
+              Description for IC Web Services
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for IC Web Services
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              IC Extension Library (IceLib) (.NET API)
+            </p>
+            <p class="card_desc">
+              Description for IC Extension Library
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for IC Extension Library
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Web Tools
+            </p>
+            <p class="card_desc">
+              Web chat and Callback development
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Web Tools
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Marketplace apps
+            </p>
+            <p class="card_desc">
+              Description for Marketplace apps
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Marketplace apps
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              MSCRM
+            </p>
+            <p class="card_desc">
+              Description for MSCRM
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for MSCRM
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              WFM Connectors
+            </p>
+            <p class="card_desc">
+              Blue Pumpkin, IEX, Aspect, eWFM, GMT
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for WFM Connectors
+              </a>
+            </p>
+          </div>
+        </td>
+
+        <td class="category_column">
+          <div class="category">
+            <abbr title="">
+              Platform
+            </abbr>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Appliances and Hardware
+            </p>
+            <p class="card_desc">
+              Description for Appliances and Hardware
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Appliances and Hardware
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Administrator
+            </p>
+            <p class="card_desc">
+              Description for Interaction Administrator
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Administrator
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Designer (handlers)
+            </p>
+            <p class="card_desc">
+              Description for Interaction Designer
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Designer
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interaction Director
+            </p>
+            <p class="card_desc">
+              Description for Interaction Director
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interaction Director
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Interactive Update
+            </p>
+            <p class="card_desc">
+              Description for Interactive Update
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Interactive Update
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Database
+            </p>
+            <p class="card_desc">
+              MS SQL, Oracle
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Database
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              Operating System
+            </p>
+            <p class="card_desc">
+              Microsoft&reg; Windows&reg; Hyper-V, etc.
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for Operating System
+              </a>
+            </p>
+          </div>
+        </td>
+
+        <td class="category_column">
+          <div class="category">
+            <abbr title="">
+              Workload Management
+            </abbr>
+          </div>
+
+          <div class="card">
+            <p class="card_title">
+              IPA - Intelligent Process Automation
+            </p>
+            <p class="card_desc">
+              Description for IPA
+            </p>
+            <p class="card_link">
+              <a href="">
+                Link for IPA
+              </a>
+            </p>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
