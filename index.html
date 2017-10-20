@@ -10,7 +10,7 @@
         /* margin: 0; */
       }
 
-      a:hover {
+      a, a:hover {
         color:#ff4f1f;
       }
 
@@ -44,19 +44,40 @@
         vertical-align: top;
       }
 
+      div.category .tooltiptext {
+        visibility: hidden;
+        width: 18%;
+        background-color: #D3D3D4;
+        border: 1px solid black;
+        color: black;
+        font-size: 10.0pt;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 5px;
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+      }
+
+      div.category:hover .tooltiptext {
+        visibility: visible;
+        margin-left: -150px;
+        margin-top: 30px;
+      }
+
       div.solution {
         background-color: #ff4f1f;
         /* color: #ffffff; */
-        /* font-size: 14.0pt; */
+        font-size: 14.0pt;
         padding: 6px;
         text-align: center;
-        /* transform:rotate(-90deg); */
-        /* vertical-align: top; */
+        transform:rotate(-90deg);
+        vertical-align: top;
         white-space:nowrap;
       }
 
       p.card_desc {
-        color: rgba(192,192,192,1.0);
+        color: #4E5054;
         font-size: 8.0pt;
         margin: 3px;
         padding: 0;
@@ -76,7 +97,6 @@
       }
 
       table {
-        /* border: thin solid black; */
         border-bottom: 6px solid #5e3d5e;
         border-collapse: collapse;
         height: 90%;
@@ -94,12 +114,19 @@
       }
 
       td.solution_column {
-        background-color: #ff4f1f;
+        /* background-color: #ff4f1f; */
+        background: linear-gradient(#ff4f1f, #ff4f1f, #5e3d5e);
         color: white;
-        padding: 20px 0 0 0;
+        padding: 160px 0 0 0;
         vertical-align: top;
         white-space: nowrap;
         width:50px;
+      }
+
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
       }
     </style>
   </head>
@@ -108,44 +135,13 @@
       <tr>
         <td class="solution_column">
           <div class="solution">
-            <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-              xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-              xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="11.720001mm" height="91.205208mm" viewBox="0 0 41.527563 323.16806"
-              id="svg4169" version="1.1" inkscape:version="0.91 r13725" sodipodi:docname="custeng.svg">
-              <defs id="defs4171" />
-              <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2"
-                inkscape:zoom="1.979899" inkscape:cx="-57.5475" inkscape:cy="119.92048" inkscape:document-units="px" inkscape:current-layer="layer1"
-                showgrid="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" inkscape:window-width="2560"
-                inkscape:window-height="1027" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" />
-              <metadata id="metadata4174">
-                <rdf:RDF>
-                  <cc:Work rdf:about="">
-                    <dc:format>image/svg+xml</dc:format>
-                    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                    <dc:title></dc:title>
-                  </cc:Work>
-                </rdf:RDF>
-              </metadata>
-              <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(-353.52199,-173.6353)">
-                <g id="g5875">
-                  <rect transform="matrix(0,-1,1,0,0,0)" ry="0" y="356.87006" x="-493.45529" height="34.831432" width="316.47192" id="rect4148"
-                    style="opacity:1;fill:#ff4f1f;fill-opacity:1;stroke:#ff4f1f;stroke-width:6.69613171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-                  />
-                  <text transform="matrix(0,-1,1,0,0,0)" sodipodi:linespacing="125%" id="text4136" y="381.4379" x="-479.04749" style="font-style:normal;font-weight:normal;font-size:27.90054893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-                    xml:space="preserve">
-                    <tspan style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:'Roboto Bold';fill:#ffffff"
-                      y="381.4379" x="-479.04749" id="tspan4138" sodipodi:role="line">Customer Engagement</tspan>
-                  </text>
-                </g>
-              </g>
-            </svg>
+            Customer Engagement
           </div>
         </td>
         <td class="category_column">
           <div class="category">
-            <abbr title="Non-voice communications through various electronic media">
               Digital
-            </abbr>
+              <span class="tooltiptext">Non-voice communications through various electronic media</span>
           </div>
 
           <div class="card">
@@ -249,9 +245,8 @@
         </td>
         <td class="category_column">
           <div class="category">
-              <abbr title="Voice communications that originate from a customer into the contact center">
-                Inbound
-              </abbr>
+            Inbound
+            <span class="tooltiptext">Voice communications that originate from a customer into the contact center</span>
           </div>
 
           <div class="card">
@@ -413,6 +408,7 @@
         <td class="category_column">
           <div class="category">
               Outbound
+              <span class="tooltiptext">Voice communications that originate from the contact center, including dialing campaigns.</span>
           </div>
 
           <div class="card">
@@ -476,6 +472,7 @@
         <td class="category_column">
           <div class="category">
               Self-Service
+              <span class="tooltiptext">The ability for customers and external parties to accomplish tasks or find information without involvement of an agent</span>
           </div>
 
           <div class="card">
@@ -555,44 +552,14 @@
 
         <td class="solution_column">
           <div class="solution">
-            <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-              xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-              xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="11.720001mm" height="91.205208mm" viewBox="0 0 41.527563 323.16806"
-              id="svg4738" version="1.1" inkscape:version="0.91 r13725" sodipodi:docname="empeng.svg">
-              <defs id="defs4740" />
-              <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2"
-                inkscape:zoom="1.4" inkscape:cx="-140.79144" inkscape:cy="169.49743" inkscape:document-units="px" inkscape:current-layer="layer1"
-                showgrid="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" inkscape:window-width="2560"
-                inkscape:window-height="1027" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" />
-              <metadata id="metadata4743">
-                <rdf:RDF>
-                  <cc:Work rdf:about="">
-                    <dc:format>image/svg+xml</dc:format>
-                    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                    <dc:title></dc:title>
-                  </cc:Work>
-                </rdf:RDF>
-              </metadata>
-              <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(-1744.9504,-405.06384)">
-                <g id="g5870" transform="matrix(0,-1,1,0,1199.0663,2332.3621)">
-                  <rect style="opacity:1;fill:#ff4f1f;fill-opacity:1;stroke:#ff4f1f;stroke-width:6.69613171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-                    id="rect4154" width="316.47192" height="34.831432" x="1607.4783" y="549.23218" ry="0" />
-                  <text sodipodi:linespacing="125%" id="text4140" y="574.13391" x="1621.5592" style="font-style:normal;font-weight:normal;font-size:27.90054893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-                    xml:space="preserve">
-                    <tspan style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:'Roboto Bold';fill:#ffffff"
-                      y="574.13391" x="1621.5592" id="tspan4142" sodipodi:role="line">Employee Engagement</tspan>
-                  </text>
-                </g>
-              </g>
-            </svg>
+            Employee Engagement
           </div>
         </td>
 
         <td class="category_column">
           <div class="category">
-            <abbr title="">
-              Collaboration
-            </abbr>
+            Collaboration
+            <span class="tooltiptext">Features that facilitate communication and modification of work objects by multiple people</span>
           </div>
 
           <div class="card">
@@ -612,9 +579,11 @@
 
         <td class="category_column">
           <div class="category">
-            <abbr title="">
-              Omnichannel Desktop
-            </abbr>
+            Omnichannel Desktop
+            <span class="tooltiptext">
+              An application that enables agents and supervisor to handle or
+              address customer interactions through various media
+            </span>
           </div>
 
           <div class="card">
@@ -733,9 +702,11 @@
 
         <td class="category_column">
           <div class="category">
-            <abbr title="">
-              Workforce&nbsp;Optimization
-            </abbr>
+            Workforce&nbsp;Optimization
+            <span class="tooltiptext">
+              Products and features that improve the scheduling of agent shifts
+              and quality of interactions.
+            </span>
           </div>
 
           <div class="card">
@@ -831,44 +802,17 @@
 
         <td class="solution_column">
           <div class="solution">
-            <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-              xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-              xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="11.720001mm" height="91.205208mm" viewBox="0 0 41.527563 323.16806"
-              id="svg5307" version="1.1" inkscape:version="0.91 r13725" sodipodi:docname="busopt.svg">
-              <defs id="defs5309" />
-              <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2"
-                inkscape:zoom="1.979899" inkscape:cx="-23.918301" inkscape:cy="157.61293" inkscape:document-units="px" inkscape:current-layer="layer1"
-                showgrid="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" inkscape:window-width="2560"
-                inkscape:window-height="1027" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" />
-              <metadata id="metadata5312">
-                <rdf:RDF>
-                  <cc:Work rdf:about="">
-                    <dc:format>image/svg+xml</dc:format>
-                    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                    <dc:title></dc:title>
-                  </cc:Work>
-                </rdf:RDF>
-              </metadata>
-              <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(1137.9066,-473.63534)">
-                <g id="g5865" transform="matrix(0,-1,1,0,-1752.3622,-481.92344)">
-                  <rect ry="0" y="617.80365" x="-1275.3788" height="34.831432" width="316.47192" id="rect4156" style="opacity:1;fill:#ff4f1f;fill-opacity:1;stroke:#ff4f1f;stroke-width:6.69613171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-                  />
-                  <text sodipodi:linespacing="125%" id="text4144" y="642.6781" x="-1258.5052" style="font-style:normal;font-weight:normal;font-size:27.90054893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-                    xml:space="preserve">
-                    <tspan style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:'Roboto Bold';fill:#ffffff"
-                      y="642.6781" x="-1258.5052" id="tspan4146" sodipodi:role="line">Business Optimization</tspan>
-                  </text>
-                </g>
-              </g>
-            </svg>
+            Business Optimization
           </div>
         </td>
 
         <td class="category_column">
           <div class="category">
-            <abbr title="">
-              Analytics
-            </abbr>
+            Analytics
+            <span class="tooltiptext">
+              Tools and features to record data, analyze data, and view data to
+              gain insights into improving business operations and processes
+            </span>
           </div>
 
           <div class="card">
@@ -944,9 +888,12 @@
 
         <td class="category_column">
           <div class="category">
-            <abbr title="">
-              Integration
-            </abbr>
+            Integration
+            <span class="tooltiptext">
+              Connecting third-party products, customizing operations, and
+              extending functionality through Application Programming
+              Interfaces
+            </span>
           </div>
 
           <div class="card">
@@ -1106,9 +1053,10 @@
 
         <td class="category_column">
           <div class="category">
-            <abbr title="">
-              Platform
-            </abbr>
+            Platform
+            <span class="tooltiptext">
+              Definition for platform
+            </span>
           </div>
 
           <div class="card">
@@ -1212,9 +1160,10 @@
 
         <td class="category_column">
           <div class="category">
-            <abbr title="">
-              Workload Management
-            </abbr>
+            Workload Management
+            <span class="tooltiptext">
+              Definition for Workload Management
+            </span>
           </div>
 
           <div class="card">
