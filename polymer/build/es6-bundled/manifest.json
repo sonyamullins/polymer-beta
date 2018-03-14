@@ -1,7 +1,0 @@
-{
-  "name": "releasenotes",
-  "short_name": "releasenotes",
-  "description": "Release Notes beta for the PureConnect Information Experience project",
-  "start_url": "/",
-  "display": "standalone"
-}
